@@ -442,8 +442,8 @@ function CreateProfileMenuItems(
             $rootKey = "Registry::HKEY_CURRENT_USER\SOFTWARE\Classes\Directory\ContextMenus\MenuTerminal$admin\shell\$guid"
             CreateMenuItem $rootKey $name $profileIcon $cmd $isadmin
         } elseif ($option -eq "Flat") {
-            CreateMenuItem ("Registry::HKEY_CURRENT_USER\SOFTWARE\Classes\Directory\shell\MenuTerminal$admin" + "_$guid") ("$name here" + ($admin ? " as admin" : "")) $profileIcon $command $isadmin
-            CreateMenuItem ("Registry::HKEY_CURRENT_USER\SOFTWARE\Classes\Directory\Background\shell\MenuTerminal$admin" + "_$guid") ("$name here" + ($admin ? " as admin" : "")) $profileIcon $command $isadmin
+            CreateMenuItem ("Registry::HKEY_CURRENT_USER\SOFTWARE\Classes\Directory\shell\MenuTerminal$admin" + "_$guid") ("$name here" + ($admin ? " as admin" : "")) $profileIcon $cmd $isadmin
+            CreateMenuItem ("Registry::HKEY_CURRENT_USER\SOFTWARE\Classes\Directory\Background\shell\MenuTerminal$admin" + "_$guid") ("$name here" + ($admin ? " as admin" : "")) $profileIcon $cmd $isadmin
         }
     }
 }
